@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="row" style="margin-top: 100px">
+        <div class="col-md-6">
+            <div class="card">
+                <h5 class="card-header">Get A Joke</h5>
+                <div class="card-body">
+                    <form class="form-inline" action="{% url 'home' %}" method="POST">
+                        {% csrf_token %}
+                        <input type="text" name="first_name" class="form-control mb-2 mr-sm-2" id="first_name"
+                            placeholder="First Name" required>
+                        <input type="text" name="last_name" class="form-control mb-2 mr-sm-2" id="last_name"
+                            placeholder="Last Name" required>
+                        <button type="submit" class="btn btn-secondary mb-2 mt-2">Tell me a Chunk Norris Joke</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <h5 class="card-header">Joke</h5>
+                <div class="card-body">
+                    <h5 class="card-title">Chuck Norris</h5>
+                    <hr>
+                    <p class="card-text">{{ joke.value.joke }}</p>
+                    <a href="{% url 'portfolio' %}" class="btn btn-info btn-sm">Check Out My Portfolio</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

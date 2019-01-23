@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+    <div class="row" style="margin-top: 100px">
+        {% for post in posts %}
+        <div class=" col-md-4 col-sm-6">
+            <div class="card mx-auto mb-4" style="max-width: 18rem;">
+                <img class="card-img-top" src="{{ post.image.url }}" alt="image" height="150px">
+                <div class="card-body">
+                    <h5 class="card-title">{{ post.title|title }}</h5>
+                    <p class="card-text">{{ post.description }}</p>
+                    <a href="{{ post.link }}" class="btn btn-primary" target="blank">Go to project</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}
