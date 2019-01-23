@@ -48,5 +48,5 @@ Personal django portfolio project with Chuck Norris Joke Api.
 
 <h3>Contact page</h3>
 <div align="center">
-    <img src="https://user-images.githubusercontent.com/19981097/51640648-47af5200-1f8e-11e9-8737-e825784af985.png" width="100%"</img> 
+    <img src="https://user-images.githubusercontent.com/19981097/51640813-b7bdd800-1f8e-11e9-87e0-54d66b614082.png" width="100%"</img> 
 </div>
